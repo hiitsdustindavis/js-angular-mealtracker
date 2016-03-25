@@ -1,11 +1,24 @@
 import {Pipe, PipeTransform} from 'angular2/core';
-import {Task} from './meal.component';
+import {Meal} from './meal.model';
 
 @Pipe({
-
+  name: "calories",
+  pure: false
 })
-export class DonePipe implements PipeTransform {
-  transform(input: Meal[], args) {
 
+export class CaloriesPipe implements PipeTransform {
+  transform(input: Meal[], args) {
+    var caloriesState = args[2];
+    if(caloriesState = 'low' ) {
+      return input.filter(function(meal) {
+        return meal.calories < 300;
+      });
+    } else if (caloriesState = "high") {
+      return input.filter(function(meal) {
+        return meal.calories >= 300;
+      });
+    } else {
+      return input;
+    }
   }
 }
