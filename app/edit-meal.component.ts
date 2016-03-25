@@ -11,7 +11,7 @@ import {Meal} from './meal.model';
     <input [(ngModel)]="meal.description" class="col-sm-8 input-lg meal-form"/>
     <input [(ngModel)]="meal.calories" class="col-sm-8 input-lg meal-form"/>
   </div>
-  
+
   `
 })
 
