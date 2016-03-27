@@ -8,7 +8,15 @@ import { Meal } from './meal.model';
   directives: [MealListComponent],
   template:`
     <div class="container">
-      <h1>Skeleton Angular2 App!</h1>
+    <header class="header">
+      <h1>BENEFIT</h1>
+      <ul class="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Health</li>
+      </ul>
+    </header>
       <meal-list
       [mealList]="meals"
       (onMealSelect)="mealWasSelected($event)">

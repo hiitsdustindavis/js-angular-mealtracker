@@ -5,15 +5,23 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   outputs: ['onSubmitNewMeal'],
   template: `
-    <div>
+    <div class="add-meal">
       <h3>Add Meal:</h3>
-      <label>Enter Meal Name:</label>
-      <input placeholder="name" #newName>
-      <label>Enter Meal Description:</label>
-      <input placeholder="meal description" #newDescription>
-      <label>Enter Meal Calories:</label>
-      <input placeholder="calories" #newCalories>
-      <button (click)="addMeal(newName, newDescription, newCalories)">Add</button>
+      <div class="add-meal-inputs">
+        <div class="input-group">
+          <label>Enter Meal Name:</label>
+          <input placeholder="name" #newName>
+        </div>
+        <div class="input-group">
+          <label>Enter Meal Description:</label>
+          <input placeholder="meal description" #newDescription>
+        </div>
+        <div class="input-group">
+          <label>Enter Meal Calories:</label>
+          <input placeholder="calories" #newCalories>
+        </div>
+      </div>
+        <button (click)="addMeal(newName, newDescription, newCalories)">Add</button>
     </div>
   `
 })
