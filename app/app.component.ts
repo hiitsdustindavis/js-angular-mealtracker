@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
   template:`
     <div class="container">
     <header class="header">
-      <h1>BENEFIT</h1>
+      <h1>BENE<em>FIT</em></h1>
       <ul class="nav">
         <li>Home</li>
         <li>About</li>

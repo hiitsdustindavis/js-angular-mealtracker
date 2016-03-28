@@ -7,12 +7,16 @@ import { EditMealComponent } from './edit-meal.component';
   inputs: ['meal'],
   directives: [EditMealComponent],
   template: `
-    <h3 (click)="mealClicked()" >{{ meal.name }}</h3>
+    <h4 (click)="mealClicked()" >{{ meal.name }}</h4>
     <div class="edit-meal" *ngIf="mealSelected">
-      <h3>{{ meal.description }}</h3>
-      <h3>{{ meal.calories }}</h3>
-      <button (click)="editClicked()">Edit Meal</button>
-      <edit-meal [meal]="meal" *ngIf="editSelected"></edit-meal>
+      <div class="edit-meal-output">
+        <p>{{ meal.description }}</p>
+        <p>{{ meal.calories }} Calories</p>
+        <button (click)="editClicked()">Edit Meal</button>
+      </div>
+      <div class="edit-meal-inputs">
+        <edit-meal [meal]="meal" *ngIf="editSelected"></edit-meal>
+      </div>
     </div>
 
 

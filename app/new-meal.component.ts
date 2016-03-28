@@ -6,20 +6,11 @@ import { Meal } from './meal.model';
   outputs: ['onSubmitNewMeal'],
   template: `
     <div class="add-meal">
-      <h3>Add Meal:</h3>
+      <h4>Add Meal:</h4>
       <div class="add-meal-inputs">
-        <div class="input-group">
-          <label>Enter Meal Name:</label>
-          <input placeholder="name" #newName>
-        </div>
-        <div class="input-group">
-          <label>Enter Meal Description:</label>
-          <input placeholder="meal description" #newDescription>
-        </div>
-        <div class="input-group">
-          <label>Enter Meal Calories:</label>
-          <input placeholder="calories" #newCalories>
-        </div>
+        <input class="input-add-meal" placeholder="Enter Meal Name" #newName>
+        <input class="input-add-meal" placeholder="Enter Meal Description" #newDescription>
+        <input class="input-add-meal" placeholder="Enter Meal Calories" #newCalories>
       </div>
         <button (click)="addMeal(newName, newDescription, newCalories)">Add</button>
     </div>
